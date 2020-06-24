@@ -1,4 +1,4 @@
-# simple-time-ago
+# short-time-ago
 
 This package exports a single function, `timeAgo`,
 which describes the time elapsed between a given date and the current date
@@ -22,13 +22,13 @@ in a human readable format (e.g., _10 minutes ago_, _in 3 seconds_).
 Using `npm`:
 
 ```
-npm i simple-time-ago
+npm i short-time-ago
 ```
 
 Using `yarn`:
 
 ```
-yarn add simple-time-ago
+yarn add short-time-ago
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ yarn add simple-time-ago
 Basic usage:
 
 ```typescript
-import { timeAgo } from 'simple-time-ago';
+import { timeAgo } from 'short-time-ago';
 
 const myDate = new Date();
 const description = timeAgo(myDate);
@@ -48,7 +48,7 @@ console.log(description);
 Specifying the current date (i.e., the `now` anchor time):
 
 ```typescript
-import { timeAgo } from 'simple-time-ago';
+import { timeAgo } from 'short-time-ago';
 
 const myDate = new Date('2019-01-01T00:00:00.000Z');
 const now = new Date('2019-01-01T00:01:00.000Z');
@@ -59,7 +59,7 @@ console.log(description);
 ```
 
 ```typescript
-import { timeAgo } from 'simple-time-ago';
+import { timeAgo } from 'short-time-ago';
 
 const myDate = new Date('2019-01-02T00:00:00.000Z');
 const now = new Date('2019-01-01T00:00:00.000Z');

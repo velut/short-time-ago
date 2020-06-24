@@ -1,11 +1,12 @@
 {
-    "name": "simple-time-ago",
+    "name": "short-time-ago",
+    "description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (e.g., '1 minute ago')",
     "version": "0.1.0",
     "author": "velut",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
-    "module": "dist/simple-time-ago.esm.js",
+    "module": "dist/short-time-ago.esm.js",
     "files": [
         "dist",
         "src"

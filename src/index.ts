@@ -32,7 +32,7 @@
  * Basic usage:
  *
  * ```typescript
- * import { timeAgo } from 'simple-time-ago';
+ * import { timeAgo } from 'short-time-ago';
  *
  * const myDate = new Date();
  * const description = timeAgo(myDate);
@@ -45,7 +45,7 @@
  * Specifying the current date (i.e., the `now` anchor time):
  *
  * ```typescript
- * import { timeAgo } from 'simple-time-ago';
+ * import { timeAgo } from 'short-time-ago';
  *
  * const myDate = new Date('2019-01-01T00:00:00.000Z');
  * const now = new Date('2019-01-01T00:01:00.000Z');
@@ -56,7 +56,7 @@
  * ```
  *
  * ```typescript
- * import { timeAgo } from 'simple-time-ago';
+ * import { timeAgo } from 'short-time-ago';
  *
  * const myDate = new Date('2019-01-02T00:00:00.000Z');
  * const now = new Date('2019-01-01T00:00:00.000Z');
