@@ -1,28 +1,98 @@
-# TSDX Bootstrap
+# simple-time-ago
 
-This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
+This package exports a single function, `timeAgo`,
+which describes the time elapsed between a given date and the current date
+in a human readable format (e.g., _10 minutes ago_, _in 3 seconds_).
 
-## Local Development
+## Pros
 
-Below is a list of commands you will probably find useful.
+-   Simple API and usage
+-   Small size (< 1KB)
+-   No dependencies
+-   Written in Typescript
+-   Well tested
+-   Accepts a custom `now` anchor time
 
-### `npm start` or `yarn start`
+## Cons
 
-Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code's Problems tab.
+-   Only `en_US` locale support.
 
-<img src="https://user-images.githubusercontent.com/4060187/52168303-574d3a00-26f6-11e9-9f3b-71dbec9ebfcb.gif" width="600" />
+## Install
 
-Your library will be rebuilt if you make edits.
+Using `npm`:
 
-### `npm run build` or `yarn build`
+```
+npm i simple-time-ago
+```
 
-Bundles the package to the `dist` folder.
-The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).
+Using `yarn`:
 
-<img src="https://user-images.githubusercontent.com/4060187/52168322-a98e5b00-26f6-11e9-8cf6-222d716b75ef.gif" width="600" />
+```
+yarn add simple-time-ago
+```
 
-### `npm test` or `yarn test`
+## Usage
 
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
-# node-simple-time-ago
+Basic usage:
+
+```typescript
+import { timeAgo } from 'simple-time-ago';
+
+const myDate = new Date();
+const description = timeAgo(myDate);
+
+// Output: `just now`.
+console.log(description);
+```
+
+Specifying the current date (i.e., the `now` anchor time):
+
+```typescript
+import { timeAgo } from 'simple-time-ago';
+
+const myDate = new Date('2019-01-01T00:00:00.000Z');
+const now = new Date('2019-01-01T00:01:00.000Z');
+const description = timeAgo(myDate, now);
+
+// Output: `1 minute ago`.
+console.log(description);
+```
+
+```typescript
+import { timeAgo } from 'simple-time-ago';
+
+const myDate = new Date('2019-01-02T00:00:00.000Z');
+const now = new Date('2019-01-01T00:00:00.000Z');
+const description = timeAgo(myDate, now);
+
+// Output: `in 1 day`.
+console.log(description);
+```
+
+## API
+
+```typescript
+timeAgo: (date: Date, now?: Date) => string;
+```
+
+## Output
+
+The following table describes `timeAgo`'s output.
+
+| Time elapsed          | Past output       | Future output    |
+| --------------------- | ----------------- | ---------------- |
+| < 1 second            | `just now`        | `just now`       |
+| < 1 minute            | `N second(s) ago` | `in N second(s)` |
+| < 1 hour              | `N minute(s) ago` | `in N minute(s)` |
+| < 1 day               | `N hour(s) ago`   | `in N hour(s)`   |
+| < 1 month (30.5 days) | `N day(s) ago`    | `in N day(s)`    |
+| < 1 year (365 days)   | `N month(s) ago`  | `in N month(s)`  |
+| > 1 year              | `N year(s) ago`   | `in N year(s)`   |
+
+## License
+
+MIT License
+
+Copyright (c) 2020 Edoardo Scibona
+
+See LICENSE file.
