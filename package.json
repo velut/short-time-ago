@@ -20,7 +20,7 @@
         "test:cov": "tsdx test --coverage",
         "test:watch": "tsdx test --watchAll --coverage",
         "lint": "tsdx lint src test",
-        "prepare": "tsdx build",
+        "prepare": "tsdx build && sed -i 's/src/..\\/src/g' dist/index.d.ts.map",
         "pre-push": "yarn lint && yarn build && yarn test:cov"
     },
     "peerDependencies": {},
