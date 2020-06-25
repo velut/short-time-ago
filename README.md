@@ -17,6 +17,10 @@ in a human readable format (e.g., _10 minutes ago_, _in 3 seconds_).
 
 -   Only `en_US` locale support.
 
+## Contents
+
+View on [unpkg](https://unpkg.com/short-time-ago/).
+
 ## Install
 
 Using `npm`:
@@ -29,6 +33,12 @@ Using `yarn`:
 
 ```
 yarn add short-time-ago
+```
+
+Using `unpkg` CDN:
+
+```html
+<script src="https://unpkg.com/short-time-ago"></script>
 ```
 
 ## Usage
@@ -66,6 +76,18 @@ const now = new Date('2019-01-01T00:00:00.000Z');
 const description = timeAgo(myDate, now);
 
 // Output: `in 1 day`.
+console.log(description);
+```
+
+Browser usage with `unpkg` CDN:
+
+```typescript
+const timeAgo = window['short-time-ago'].timeAgo;
+
+const myDate = new Date();
+const description = timeAgo(myDate);
+
+// Output: `just now`.
 console.log(description);
 ```
 
