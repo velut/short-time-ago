@@ -7,6 +7,8 @@
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "module": "dist/short-time-ago.esm.js",
+    "browser": "dist/short-time-ago.umd.production.min.js",
+    "unpkg": "dist/short-time-ago.umd.production.min.js",
     "files": [
         "dist",
         "src"
@@ -23,12 +25,13 @@
     },
     "scripts": {
         "start": "tsdx watch",
-        "build": "tsdx build",
+        "build": "tsdx build --format cjs,ejs,umd",
         "test": "tsdx test",
         "test:cov": "tsdx test --coverage",
         "test:watch": "tsdx test --watchAll --coverage",
         "lint": "tsdx lint src test",
-        "prepare": "tsdx build && sed -i 's/src/..\\/src/g' dist/index.d.ts.map",
+        "fixDeclarationMap": "sed -i 's/src/..\\/src/g' dist/index.d.ts.map",
+        "prepare": "yarn build && yarn fixDeclarationMap",
         "pre-push": "yarn lint && yarn build && yarn test:cov"
     },
     "peerDependencies": {},
