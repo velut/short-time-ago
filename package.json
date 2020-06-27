@@ -25,7 +25,7 @@
     },
     "scripts": {
         "start": "tsdx watch",
-        "build": "tsdx build --format cjs,ejs,umd",
+        "build": "tsdx build --format cjs,esm,umd",
         "test": "tsdx test",
         "test:cov": "tsdx test --coverage",
         "test:watch": "tsdx test --watchAll --coverage",
