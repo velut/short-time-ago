@@ -35,10 +35,38 @@ Using `yarn`:
 yarn add short-time-ago
 ```
 
-Using `unpkg` CDN:
+## CDN
+
+UMD build:
 
 ```html
+<!-- Add UMD script -->
 <script src="https://unpkg.com/short-time-ago"></script>
+
+<!-- Usage -->
+<script>
+    const timeAgo = window['short-time-ago'].timeAgo;
+
+    const myDate = new Date();
+    const description = timeAgo(myDate);
+
+    // Output: `just now`.
+    console.log(description);
+</script>
+```
+
+Module build:
+
+```html
+<script type="module">
+    import { timeAgo } from 'https://unpkg.com/short-time-ago?module';
+
+    const myDate = new Date();
+    const description = timeAgo(myDate);
+
+    // Output: `just now`.
+    console.log(description);
+</script>
 ```
 
 ## Usage
@@ -76,18 +104,6 @@ const now = new Date('2019-01-01T00:00:00.000Z');
 const description = timeAgo(myDate, now);
 
 // Output: `in 1 day`.
-console.log(description);
-```
-
-Browser usage with `unpkg` CDN:
-
-```typescript
-const timeAgo = window['short-time-ago'].timeAgo;
-
-const myDate = new Date();
-const description = timeAgo(myDate);
-
-// Output: `just now`.
 console.log(description);
 ```
 
