@@ -7,9 +7,11 @@
     "source": "src/index.ts",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
-    "module": "dist/short-time-ago.esm.js",
-    "browser": "dist/short-time-ago.umd.production.min.js",
-    "unpkg": "dist/short-time-ago.umd.production.min.js",
+    "module": "dist/index.module.js",
+    "esmodule": "dist/index.modern.js",
+    "amdName": "short-time-ago",
+    "browser": "dist/index.umd.js",
+    "unpkg": "dist/index.umd.js",
     "files": [
         "dist",
         "src"
@@ -26,13 +28,14 @@
     },
     "scripts": {
         "start": "tsdx watch",
-        "build": "tsdx build --format cjs,esm,umd",
+        "build:tsdx": "tsdx build --format cjs,esm,umd",
+        "build": "microbundle --strict",
         "test": "tsdx test",
         "test:cov": "tsdx test --coverage",
         "test:watch": "tsdx test --watchAll --coverage",
         "lint": "tsdx lint src test",
         "fixDeclarationMap": "sed -i 's/src/..\\/src/g' dist/index.d.ts.map",
-        "prepare": "yarn build && yarn fixDeclarationMap",
+        "prepare": "yarn build",
         "pre-push": "yarn lint && yarn build && yarn test:cov"
     },
     "peerDependencies": {},
@@ -52,6 +55,7 @@
     },
     "devDependencies": {
         "husky": "^4.2.5",
+        "microbundle": "^0.12.2",
         "tsdx": "^0.13.2",
         "tslib": "^2.0.0",
         "typescript": "^3.9.5"
