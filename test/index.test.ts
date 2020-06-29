@@ -25,7 +25,7 @@ describe('when date is in the past, timeAgo', () => {
         }
     });
 
-    it('returns `X second(s) ago` if the time difference is < 1 minute', () => {
+    it('returns `N second(s) ago` if the time difference is < 1 minute', () => {
         for (const i of range(1, 59)) {
             const date = new Date(now.getTime() - i * second);
             expect(timeAgo(date, now)).toEqual(
@@ -34,7 +34,7 @@ describe('when date is in the past, timeAgo', () => {
         }
     });
 
-    it('returns `X minute(s) ago` if the time difference is < 1 hour', () => {
+    it('returns `N minute(s) ago` if the time difference is < 1 hour', () => {
         for (const i of range(1, 59)) {
             const date = new Date(now.getTime() - i * minute);
             expect(timeAgo(date, now)).toEqual(
@@ -43,7 +43,7 @@ describe('when date is in the past, timeAgo', () => {
         }
     });
 
-    it('returns `X hour(s) ago` if the time difference is < 1 day', () => {
+    it('returns `N hour(s) ago` if the time difference is < 1 day', () => {
         for (const i of range(1, 23)) {
             const date = new Date(now.getTime() - i * hour);
             expect(timeAgo(date, now)).toEqual(
@@ -52,8 +52,8 @@ describe('when date is in the past, timeAgo', () => {
         }
     });
 
-    it('returns `X day(s) ago` if the time difference is < 1 month (30.5 days)', () => {
-        for (const i of range(1, 29)) {
+    it('returns `N day(s) ago` if the time difference is < 1 month (30.5 days)', () => {
+        for (const i of range(1, 30)) {
             const date = new Date(now.getTime() - i * day);
             expect(timeAgo(date, now)).toEqual(
                 `${i} day${i > 1 ? 's' : ''} ago`
@@ -61,7 +61,7 @@ describe('when date is in the past, timeAgo', () => {
         }
     });
 
-    it('returns `X month(s) ago` if the time difference is < 1 year', () => {
+    it('returns `N month(s) ago` if the time difference is < 1 year', () => {
         for (const i of range(1, 11)) {
             const date = new Date(now.getTime() - i * month);
             expect(timeAgo(date, now)).toEqual(
@@ -70,7 +70,7 @@ describe('when date is in the past, timeAgo', () => {
         }
     });
 
-    it('returns `X year(s) ago` if the time difference is > 1 year', () => {
+    it('returns `N year(s) ago` if the time difference is > 1 year', () => {
         for (const i of range(1, 100)) {
             const date = new Date(now.getTime() - i * year);
             expect(timeAgo(date, now)).toEqual(
@@ -90,7 +90,7 @@ describe('when date is in the future, timeAgo', () => {
         }
     });
 
-    it('returns `in X second(s)` if the time difference is < 1 minute', () => {
+    it('returns `in N second(s)` if the time difference is < 1 minute', () => {
         for (const i of range(1, 59)) {
             const date = new Date(now.getTime() + i * second);
             expect(timeAgo(date, now)).toEqual(
@@ -99,7 +99,7 @@ describe('when date is in the future, timeAgo', () => {
         }
     });
 
-    it('returns `in X minute(s)` if the time difference is < 1 hour', () => {
+    it('returns `in N minute(s)` if the time difference is < 1 hour', () => {
         for (const i of range(1, 59)) {
             const date = new Date(now.getTime() + i * minute);
             expect(timeAgo(date, now)).toEqual(
@@ -108,7 +108,7 @@ describe('when date is in the future, timeAgo', () => {
         }
     });
 
-    it('returns `in X hour(s)` if the time difference is < 1 day', () => {
+    it('returns `in N hour(s)` if the time difference is < 1 day', () => {
         for (const i of range(1, 23)) {
             const date = new Date(now.getTime() + i * hour);
             expect(timeAgo(date, now)).toEqual(
@@ -117,8 +117,8 @@ describe('when date is in the future, timeAgo', () => {
         }
     });
 
-    it('returns `in X day(s)` if the time difference is < 1 month (30.5 days)', () => {
-        for (const i of range(1, 29)) {
+    it('returns `in N day(s)` if the time difference is < 1 month (30.5 days)', () => {
+        for (const i of range(1, 30)) {
             const date = new Date(now.getTime() + i * day);
             expect(timeAgo(date, now)).toEqual(
                 `in ${i} day${i > 1 ? 's' : ''}`
@@ -126,7 +126,7 @@ describe('when date is in the future, timeAgo', () => {
         }
     });
 
-    it('returns `in X month(s)` if the time difference is < 1 year', () => {
+    it('returns `in N month(s)` if the time difference is < 1 year', () => {
         for (const i of range(1, 11)) {
             const date = new Date(now.getTime() + i * month);
             expect(timeAgo(date, now)).toEqual(
@@ -135,7 +135,7 @@ describe('when date is in the future, timeAgo', () => {
         }
     });
 
-    it('returns `in X year(s)` if the time difference is > 1 year', () => {
+    it('returns `in N year(s)` if the time difference is > 1 year', () => {
         for (const i of range(1, 100)) {
             const date = new Date(now.getTime() + i * year);
             expect(timeAgo(date, now)).toEqual(
