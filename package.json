@@ -1,7 +1,7 @@
 {
     "name": "short-time-ago",
     "description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (e.g., '1 minute ago')",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "author": "velut",
     "license": "MIT",
     "source": "src/index.ts",
