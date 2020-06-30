@@ -12,6 +12,7 @@
     "amdName": "short-time-ago",
     "browser": "dist/index.umd.js",
     "unpkg": "dist/index.umd.js",
+    "sideEffects": false,
     "files": [
         "dist",
         "src"
