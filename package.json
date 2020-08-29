@@ -36,7 +36,6 @@
         "test:watch": "tsdx test  --runInBand --watchAll --coverage",
         "test:ci": "tsdx test --runInBand --ci --coverage",
         "lint": "tsdx lint src test",
-        "fixDeclarationMap": "sed -i 's/src/..\\/src/g' dist/index.d.ts.map",
         "prepare": "yarn build",
         "pre-push": "yarn && yarn lint && yarn build && yarn test:cov"
     },
