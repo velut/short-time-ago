@@ -70,14 +70,14 @@
  * @param now - the current date (optional, defaults to `new Date()`)
  */
 export function timeAgo(date: Date, now?: Date): string {
-    const units: [string, number][] = [
+    const units = [
         ['year', 365 * 24 * 60 * 60 * 1000],
         ['month', 30.5 * 24 * 60 * 60 * 1000],
         ['day', 24 * 60 * 60 * 1000],
         ['hour', 60 * 60 * 1000],
         ['minute', 60 * 1000],
         ['second', 1000],
-    ];
+    ] as const;
 
     const diff = (now || new Date()).getTime() - date.getTime();
     const elapsed = Math.abs(diff);
