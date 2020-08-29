@@ -1,7 +1,7 @@
 {
     "name": "short-time-ago",
     "description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (e.g., '1 minute ago')",
-    "version": "1.1.1",
+    "version": "0.0.0-development",
     "author": "velut",
     "license": "MIT",
     "source": "src/index.ts",
@@ -37,7 +37,8 @@
         "test:ci": "tsdx test --runInBand --ci --coverage",
         "lint": "tsdx lint src test",
         "prepare": "yarn build",
-        "pre-push": "yarn && yarn lint && yarn build && yarn test:cov"
+        "pre-push": "yarn && yarn lint && yarn build && yarn test:cov",
+        "semantic-release": "semantic-release"
     },
     "peerDependencies": {},
     "husky": {
@@ -57,6 +58,7 @@
     "devDependencies": {
         "husky": "4.2.5",
         "microbundle": "0.12.3",
+        "semantic-release": "17.1.1",
         "tsdx": "0.13.3",
         "tslib": "2.0.1",
         "typescript": "3.9.7"
