@@ -38,7 +38,7 @@
         "lint": "tsdx lint src test",
         "fixDeclarationMap": "sed -i 's/src/..\\/src/g' dist/index.d.ts.map",
         "prepare": "yarn build",
-        "pre-push": "yarn lint && yarn build && yarn test:cov"
+        "pre-push": "yarn && yarn lint && yarn build && yarn test:cov"
     },
     "peerDependencies": {},
     "husky": {
