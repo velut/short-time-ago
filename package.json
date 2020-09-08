@@ -57,7 +57,7 @@
     },
     "devDependencies": {
         "eslint-plugin-prettier": "3.1.4",
-        "husky": "4.2.5",
+        "husky": "4.3.0",
         "microbundle": "0.12.3",
         "prettier": "2.1.1",
         "semantic-release": "17.1.1",
