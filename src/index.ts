@@ -1,15 +1,14 @@
 /**
  * This package exports a single function, {@link timeAgo},
  * which describes the time elapsed between a given date and the current date
- * in a human readable format (e.g., `10 minutes ago`, `in 3 seconds`).
+ * in a human readable format (for example, `10 minutes ago`, `in 3 seconds`).
  *
  * @packageDocumentation
  */
 
 /**
  * `timeAgo` returns a string describing the time elapsed between
- * a given date and the current date
- * (i.e., the time at which the function is called).
+ * a given date and the current time at which the function is called.
  *
  * @remarks
  * `timeAgo` only supports the `en_US` locale.
@@ -42,7 +41,7 @@
  * ```
  *
  * @example
- * Specifying the current date (i.e., the `now` anchor time):
+ * Specifying a custom current date with the `now` parameter:
  *
  * ```typescript
  * import { timeAgo } from 'short-time-ago';
