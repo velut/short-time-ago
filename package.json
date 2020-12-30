@@ -44,7 +44,8 @@
         "lint": "tsdx lint src test",
         "prepare": "yarn build",
         "pre-push": "yarn && yarn lint && yarn build && yarn test:cov",
-        "semantic-release": "semantic-release"
+        "semantic-release": "semantic-release",
+        "release": "np"
     },
     "peerDependencies": {},
     "husky": {
@@ -61,10 +62,14 @@
         "trailingComma": "es5",
         "arrowParens": "always"
     },
+    "np": {
+        "branch": "main"
+    },
     "devDependencies": {
         "eslint-plugin-prettier": "3.3.0",
         "husky": "4.3.6",
         "microbundle": "0.13.0",
+        "np": "7.1.0",
         "prettier": "2.2.1",
         "semantic-release": "17.3.1",
         "tsdx": "0.14.1",
