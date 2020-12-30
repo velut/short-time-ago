@@ -11,16 +11,17 @@
 
 This package exports a single function, `timeAgo`,
 which describes the time elapsed between a given date and the current date
-in a human readable format (e.g., _10 minutes ago_, _in 3 seconds_).
+in a human readable format (for example, _"10 minutes ago"_, _"in 3 seconds"_).
 
 ## Pros
 
 -   Simple API and usage
 -   Small size (< 1KB)
 -   No dependencies
+-   Works in the browser
 -   Written in Typescript
--   Well tested
--   Accepts a custom `now` anchor time
+-   Well tested and documented
+-   Accepts a custom date for the `now` anchor time
 
 ## Cons
 
@@ -92,7 +93,7 @@ const description = timeAgo(myDate);
 console.log(description);
 ```
 
-Specifying the current date (i.e., the `now` anchor time):
+Specifying a custom current date with the `now` parameter:
 
 ```typescript
 import { timeAgo } from 'short-time-ago';
@@ -121,6 +122,8 @@ console.log(description);
 ```typescript
 timeAgo: (date: Date, now?: Date) => string;
 ```
+
+Explore the API on [jsDocs.io](https://www.jsdocs.io/package/short-time-ago).
 
 ## Output
 
