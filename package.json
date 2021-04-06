@@ -47,17 +47,6 @@
         "release": "np"
     },
     "peerDependencies": {},
-    "prettier": {
-        "printWidth": 80,
-        "semi": true,
-        "singleQuote": true,
-        "tabWidth": 4,
-        "trailingComma": "es5",
-        "arrowParens": "always"
-    },
-    "np": {
-        "branch": "main"
-    },
     "devDependencies": {
         "@commitlint/cli": "12.1.1",
         "@commitlint/config-conventional": "12.1.1",
