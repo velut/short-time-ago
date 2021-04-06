@@ -27,9 +27,15 @@ in a human readable format (for example, _"10 minutes ago"_, _"in 3 seconds"_).
 
 -   Only `en_US` locale support.
 
-## Contents
+## API & Package Info
 
-View on [unpkg](https://unpkg.com/short-time-ago/).
+```typescript
+timeAgo: (date: Date, now?: Date) => string;
+```
+
+-   Explore the API on [**jsDocs.io**](https://www.jsdocs.io/package/short-time-ago)
+-   View package contents on [**unpkg**](https://unpkg.com/short-time-ago/)
+-   View repository on [**GitHub**](https://github.com/velut/node-short-time-ago)
 
 ## Install
 
@@ -116,14 +122,6 @@ const description = timeAgo(myDate, now);
 // Output: `in 1 day`.
 console.log(description);
 ```
-
-## API
-
-```typescript
-timeAgo: (date: Date, now?: Date) => string;
-```
-
-Explore the API on [jsDocs.io](https://www.jsdocs.io/package/short-time-ago).
 
 ## Output
 
