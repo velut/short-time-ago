@@ -42,17 +42,11 @@
         "test:watch": "tsdx test  --runInBand --watchAll --coverage",
         "test:ci": "tsdx test --runInBand --ci --coverage",
         "lint": "tsdx lint src test",
-        "prepare": "yarn build",
+        "prepare": "husky install && yarn build",
         "pre-push": "yarn && yarn lint && yarn build && yarn test:cov",
         "release": "np"
     },
     "peerDependencies": {},
-    "husky": {
-        "hooks": {
-            "pre-commit": "yarn lint",
-            "pre-push": "yarn pre-push"
-        }
-    },
     "prettier": {
         "printWidth": 80,
         "semi": true,
@@ -65,8 +59,10 @@
         "branch": "main"
     },
     "devDependencies": {
+        "@commitlint/cli": "12.1.1",
+        "@commitlint/config-conventional": "12.1.1",
         "eslint-plugin-prettier": "3.3.1",
-        "husky": "4.3.8",
+        "husky": "6.0.0",
         "microbundle": "0.13.0",
         "np": "7.4.0",
         "prettier": "2.2.1",
