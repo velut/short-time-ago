@@ -2,7 +2,7 @@
     "name": "short-time-ago",
     "description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (for example, '1 minute ago')",
     "version": "2.0.0",
-    "author": "velut",
+    "author": "Edoardo Scibona (velut)",
     "license": "MIT",
     "amdName": "short-time-ago",
     "source": "./src/index.ts",
@@ -13,26 +13,40 @@
     "browser": "./dist/index.umd.js",
     "unpkg": "./dist/index.umd.js",
     "exports": {
-        "require": "./dist/index.js",
-        "import": "./dist/index.modern.js",
-        "browser": "./dist/index.umd.js",
-        "default": "./dist/index.js"
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.modern.js",
+            "browser": "./dist/index.umd.js",
+            "default": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
     },
     "sideEffects": false,
     "files": [
-        "dist",
-        "src"
+        "src",
+        "dist"
     ],
     "engines": {
         "node": ">=12"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/velut/node-short-time-ago"
+        "url": "https://github.com/velut/node-short-time-ago.git"
     },
     "bugs": {
         "url": "https://github.com/velut/node-short-time-ago/issues"
     },
+    "keywords": [
+        "time",
+        "ago",
+        "date",
+        "format",
+        "describe",
+        "relative",
+        "human",
+        "readable",
+        "typescript"
+    ],
     "scripts": {
         "start": "tsdx watch",
         "build:tsdx": "tsdx build --format cjs,esm,umd",
@@ -46,7 +60,6 @@
         "pre-push": "yarn && yarn lint && yarn build && yarn test:cov",
         "release": "np"
     },
-    "peerDependencies": {},
     "devDependencies": {
         "@commitlint/cli": "12.1.1",
         "@commitlint/config-conventional": "12.1.1",
@@ -58,15 +71,5 @@
         "tsdx": "0.14.1",
         "tslib": "2.2.0",
         "typescript": "4.2.3"
-    },
-    "keywords": [
-        "time",
-        "ago",
-        "date",
-        "format",
-        "relative",
-        "human",
-        "readable",
-        "typescript"
-    ]
+    }
 }
