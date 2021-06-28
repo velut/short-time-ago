@@ -67,7 +67,7 @@
         "husky": "6.0.0",
         "microbundle": "0.13.3",
         "np": "7.5.0",
-        "prettier": "2.3.1",
+        "prettier": "2.3.2",
         "tsdx": "0.14.1",
         "tslib": "2.3.0",
         "typescript": "4.3.4"
