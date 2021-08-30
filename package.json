@@ -64,7 +64,7 @@
         "@commitlint/cli": "13.1.0",
         "@commitlint/config-conventional": "13.1.0",
         "eslint-plugin-prettier": "3.4.1",
-        "husky": "7.0.1",
+        "husky": "7.0.2",
         "microbundle": "0.13.3",
         "np": "7.5.0",
         "prettier": "2.3.2",
