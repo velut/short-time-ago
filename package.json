@@ -63,7 +63,7 @@
     "devDependencies": {
         "@commitlint/cli": "13.1.0",
         "@commitlint/config-conventional": "13.1.0",
-        "eslint-plugin-prettier": "3.4.1",
+        "eslint-plugin-prettier": "4.0.0",
         "husky": "7.0.2",
         "microbundle": "0.13.3",
         "np": "7.5.0",
