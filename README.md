@@ -4,7 +4,6 @@
 [![Coverage](https://img.shields.io/codecov/c/gh/velut/node-short-time-ago)](https://codecov.io/gh/velut/node-short-time-ago)
 [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/short-time-ago)
 ![Language](https://img.shields.io/github/languages/top/velut/node-short-time-ago)
-[![Dependencies](https://img.shields.io/david/velut/node-short-time-ago)](https://david-dm.org/velut/node-short-time-ago)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/short-time-ago)](https://bundlephobia.com/result?p=short-time-ago)
 [![npm](https://img.shields.io/npm/v/short-time-ago)](https://www.npmjs.com/package/short-time-ago)
 [![License](https://img.shields.io/github/license/velut/node-short-time-ago)](https://github.com/velut/node-short-time-ago/blob/master/LICENSE)
