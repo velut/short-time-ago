@@ -57,8 +57,7 @@
         "test:ci": "dts test --runInBand --ci --coverage",
         "lint": "dts lint src test",
         "prepare": "husky install && yarn build",
-        "pre-push": "yarn && yarn lint && yarn build && yarn test:cov",
-        "release": "np"
+        "pre-push": "yarn && yarn lint && yarn build && yarn test:cov"
     },
     "devDependencies": {
         "@commitlint/cli": "17.0.3",
