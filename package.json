@@ -63,10 +63,10 @@
     "devDependencies": {
         "@commitlint/cli": "17.0.3",
         "@commitlint/config-conventional": "17.0.3",
-        "dts-cli": "1.5.2",
+        "dts-cli": "1.6.0",
         "eslint-plugin-prettier": "4.2.1",
         "husky": "8.0.1",
-        "microbundle": "0.15.0",
+        "microbundle": "0.15.1",
         "prettier": "2.7.1",
         "tslib": "2.4.0",
         "typescript": "4.7.4"
