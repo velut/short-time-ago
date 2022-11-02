@@ -60,7 +60,7 @@
         "pre-push": "yarn && yarn lint && yarn build && yarn test:cov"
     },
     "devDependencies": {
-        "@commitlint/cli": "17.1.2",
+        "@commitlint/cli": "17.2.0",
         "@commitlint/config-conventional": "17.2.0",
         "dts-cli": "1.6.0",
         "eslint-plugin-prettier": "4.2.1",
