@@ -62,7 +62,7 @@
     "devDependencies": {
         "@commitlint/cli": "17.6.5",
         "@commitlint/config-conventional": "17.6.1",
-        "dts-cli": "2.0.2",
+        "dts-cli": "2.0.3",
         "eslint-plugin-prettier": "4.2.1",
         "husky": "8.0.3",
         "microbundle": "0.15.1",
