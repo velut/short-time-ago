@@ -11,6 +11,9 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: 17.7.0
     version: 17.7.0
+  '@types/jest':
+    specifier: ^29.5.5
+    version: 29.5.5
   dts-cli:
     specifier: 2.0.3
     version: 2.0.3(@babel/plugin-syntax-flow@7.22.5)(@babel/plugin-transform-react-jsx@7.22.15)(@types/node@20.6.4)
