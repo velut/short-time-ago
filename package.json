@@ -57,7 +57,7 @@
         "test:ci": "dts test --runInBand --ci --coverage",
         "lint": "dts lint src test",
         "prepare": "husky install && pnpm build",
-        "pre-push": "pnpm && pnpm lint && pnpm build && pnpm test:cov"
+        "pre-push": "pnpm i && pnpm lint && pnpm build && pnpm test:cov"
     },
     "devDependencies": {
         "@commitlint/cli": "17.7.1",
