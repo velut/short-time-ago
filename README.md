@@ -49,6 +49,12 @@ Using `yarn`:
 yarn add short-time-ago
 ```
 
+Using `pnpm`:
+
+```
+pnpm add short-time-ago
+```
+
 ## CDN
 
 UMD build:
