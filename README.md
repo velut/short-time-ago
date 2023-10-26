@@ -143,8 +143,10 @@ The following table describes `timeAgo`'s output.
 
 ## License
 
-MIT License
+```
+MIT
+```
 
-Copyright (c) 2023 Edoardo Scibona
+MIT License. See [LICENSE](LICENSE) file.
 
-See LICENSE file.
+Copyright (c) 2023 Edoardo Scibona.
