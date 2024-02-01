@@ -65,7 +65,7 @@
         "@types/jest": "^29.5.8",
         "dts-cli": "2.0.3",
         "eslint-plugin-prettier": "4.2.1",
-        "husky": "8.0.3",
+        "husky": "9.0.7",
         "microbundle": "0.15.1",
         "prettier": "2.8.8",
         "tslib": "2.6.2",
