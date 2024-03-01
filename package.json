@@ -60,7 +60,7 @@
         "pre-push": "pnpm i && pnpm lint && pnpm build && pnpm test:cov"
     },
     "devDependencies": {
-        "@commitlint/cli": "18.6.0",
+        "@commitlint/cli": "19.0.3",
         "@commitlint/config-conventional": "18.6.0",
         "@types/jest": "^29.5.8",
         "dts-cli": "2.0.4",
