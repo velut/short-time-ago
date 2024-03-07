@@ -62,7 +62,7 @@
     "devDependencies": {
         "@commitlint/cli": "19.0.3",
         "@commitlint/config-conventional": "19.0.3",
-        "@types/jest": "^29.5.8",
+        "@types/jest": "^29.5.12",
         "dts-cli": "2.0.4",
         "eslint-plugin-prettier": "4.2.1",
         "husky": "9.0.11",
