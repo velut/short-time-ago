@@ -69,6 +69,6 @@
         "microbundle": "0.15.1",
         "prettier": "3.2.5",
         "tslib": "2.6.3",
-        "typescript": "5.5.3"
+        "typescript": "5.5.4"
     }
 }
