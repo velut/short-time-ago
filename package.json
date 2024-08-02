@@ -56,16 +56,12 @@
         "test:watch": "dts test  --runInBand --watchAll --coverage",
         "test:ci": "dts test --runInBand --ci --coverage",
         "lint": "dts lint src test",
-        "prepare": "husky install && pnpm build",
         "pre-push": "pnpm i && pnpm lint && pnpm build && pnpm test:cov"
     },
     "devDependencies": {
-        "@commitlint/cli": "19.3.0",
-        "@commitlint/config-conventional": "19.2.2",
         "@types/jest": "^29.5.12",
         "dts-cli": "2.0.5",
         "eslint-plugin-prettier": "5.2.1",
-        "husky": "9.1.4",
         "microbundle": "0.15.1",
         "prettier": "3.2.5",
         "tslib": "2.6.3",
