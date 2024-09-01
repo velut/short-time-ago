@@ -64,7 +64,7 @@
         "eslint-plugin-prettier": "5.2.1",
         "microbundle": "0.15.1",
         "prettier": "3.2.5",
-        "tslib": "2.6.3",
+        "tslib": "2.7.0",
         "typescript": "5.5.4"
     }
 }
