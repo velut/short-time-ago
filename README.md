@@ -149,4 +149,4 @@ MIT
 
 MIT License. See [LICENSE](LICENSE) file.
 
-Copyright (c) 2023 Edoardo Scibona.
+Copyright (c) 2025 Edoardo Scibona.
