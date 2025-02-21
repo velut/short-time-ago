@@ -1,6 +1,6 @@
 {
 	"name": "short-time-ago",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (for example, '1 minute ago')",
 	"license": "MIT",
 	"author": {
