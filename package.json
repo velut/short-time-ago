@@ -2,7 +2,7 @@
     "name": "short-time-ago",
     "description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (for example, '1 minute ago')",
     "version": "2.0.0",
-    "author": "Edoardo Scibona (velut)",
+    "author": "Edoardo Scibona",
     "license": "MIT",
     "amdName": "short-time-ago",
     "source": "./src/index.ts",
