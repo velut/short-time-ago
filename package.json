@@ -1,70 +1,64 @@
 {
-    "name": "short-time-ago",
-    "description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (for example, '1 minute ago')",
-    "version": "2.0.0",
-    "author": "Edoardo Scibona",
-    "license": "MIT",
-    "amdName": "short-time-ago",
-    "source": "./src/index.ts",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "module": "./dist/index.module.js",
-    "esmodule": "./dist/index.modern.js",
-    "browser": "./dist/index.umd.js",
-    "unpkg": "./dist/index.umd.js",
-    "exports": {
-        ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.modern.js",
-            "browser": "./dist/index.umd.js",
-            "default": "./dist/index.js"
-        },
-        "./package.json": "./package.json"
-    },
-    "sideEffects": false,
-    "files": [
-        "src",
-        "dist"
-    ],
-    "engines": {
-        "node": ">=12"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/velut/node-short-time-ago.git"
-    },
-    "bugs": {
-        "url": "https://github.com/velut/node-short-time-ago/issues"
-    },
-    "keywords": [
-        "time",
-        "ago",
-        "date",
-        "format",
-        "describe",
-        "relative",
-        "human",
-        "readable",
-        "typescript"
-    ],
-    "scripts": {
-        "start": "dts watch",
-        "build:dts": "dts build --format cjs,esm,umd",
-        "build": "microbundle --strict",
-        "test": "dts test  --runInBand",
-        "test:cov": "dts test  --runInBand --coverage",
-        "test:watch": "dts test  --runInBand --watchAll --coverage",
-        "test:ci": "dts test --runInBand --ci --coverage",
-        "lint": "dts lint src test",
-        "pre-push": "pnpm i && pnpm lint && pnpm build && pnpm test:cov"
-    },
-    "devDependencies": {
-        "@types/jest": "^29.5.12",
-        "dts-cli": "2.0.5",
-        "eslint-plugin-prettier": "5.2.3",
-        "microbundle": "0.15.1",
-        "prettier": "3.2.5",
-        "tslib": "2.8.1",
-        "typescript": "5.7.3"
-    }
+	"name": "short-time-ago",
+	"version": "2.0.0",
+	"description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (for example, '1 minute ago')",
+	"license": "MIT",
+	"author": {
+		"name": "Edoardo Scibona",
+		"url": "https://github.com/velut"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/velut/short-time-ago.git"
+	},
+	"bugs": {
+		"url": "https://github.com/velut/short-time-ago/issues"
+	},
+	"keywords": [
+		"time",
+		"ago",
+		"date",
+		"format",
+		"describe",
+		"relative",
+		"human",
+		"readable",
+		"typescript"
+	],
+	"sideEffects": false,
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"check": "tsc --noEmit",
+		"build": "tsc --noEmit && tsup",
+		"attw": "attw --pack . --ignore-rules cjs-resolves-to-esm",
+		"test": "vitest",
+		"test:ci": "vitest run --coverage --bail 1",
+		"lint": "prettier --check .",
+		"format": "prettier --write .",
+		"pre-push": "bun install && bun run lint && bun run build && bun run test:ci && bun run attw",
+		"release": "np --no-cleanup"
+	},
+	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.17.3",
+		"@vitest/coverage-v8": "^3.0.6",
+		"np": "^10.2.0",
+		"prettier": "^3.5.1",
+		"tsup": "^8.3.6",
+		"typescript": "^5.7.3",
+		"vitest": "^3.0.6"
+	}
 }
