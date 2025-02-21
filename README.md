@@ -1,11 +1,11 @@
 # short-time-ago
 
 [![Build status](https://img.shields.io/github/actions/workflow/status/velut/short-time-ago/main.yml?branch=main)](https://github.com/velut/short-time-ago/actions?query=workflow%3ACI)
-[![Coverage](https://img.shields.io/codecov/c/gh/velut/node-short-time-ago)](https://codecov.io/gh/velut/node-short-time-ago)
+[![Coverage](https://img.shields.io/codecov/c/gh/velut/short-time-ago)](https://codecov.io/gh/velut/short-time-ago)
 [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/short-time-ago)
-![Language](https://img.shields.io/github/languages/top/velut/node-short-time-ago)
+![Language](https://img.shields.io/github/languages/top/velut/short-time-ago)
 [![npm](https://img.shields.io/npm/v/short-time-ago)](https://www.npmjs.com/package/short-time-ago)
-[![License](https://img.shields.io/github/license/velut/node-short-time-ago)](https://github.com/velut/node-short-time-ago/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/velut/short-time-ago)](https://github.com/velut/short-time-ago/blob/main/LICENSE)
 
 This package exports a single function, `timeAgo`,
 which describes the time elapsed between a given date and the current date
@@ -53,40 +53,6 @@ Using `pnpm`:
 
 ```
 pnpm add short-time-ago
-```
-
-## CDN
-
-UMD build:
-
-```html
-<!-- Add UMD script -->
-<script src="https://unpkg.com/short-time-ago"></script>
-
-<!-- Usage -->
-<script>
-	const timeAgo = window["short-time-ago"].timeAgo;
-
-	const myDate = new Date();
-	const description = timeAgo(myDate);
-
-	// Output: `just now`.
-	console.log(description);
-</script>
-```
-
-Module build:
-
-```html
-<script type="module">
-	import { timeAgo } from "https://unpkg.com/short-time-ago?module";
-
-	const myDate = new Date();
-	const description = timeAgo(myDate);
-
-	// Output: `just now`.
-	console.log(description);
-</script>
 ```
 
 ## Usage
@@ -147,6 +113,6 @@ The following table describes `timeAgo`'s output.
 MIT
 ```
 
-MIT License. See [LICENSE](LICENSE) file.
+MIT License. See [LICENSE](./LICENSE) file.
 
 Copyright (c) 2025 Edoardo Scibona.
