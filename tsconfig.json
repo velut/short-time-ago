@@ -1,22 +1,25 @@
+// See https://www.totaltypescript.com/tsconfig-cheat-sheet.
 {
-    "include": ["src", "types"],
-    "compilerOptions": {
-        "module": "esnext",
-        "target": "esnext",
-        "lib": ["dom", "esnext"],
-        "importHelpers": true,
-        "declaration": true,
-        "sourceMap": true,
-        "declarationMap": true,
-        "rootDir": "./src",
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "moduleResolution": "node",
-        "jsx": "react",
-        "esModuleInterop": true,
-        "downlevelIteration": true
-    }
+	"compilerOptions": {
+		// Base options.
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2022",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+		// Strictness.
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		// Building a library.
+		"declaration": true,
+		// Transpiling with a bundler.
+		"module": "preserve",
+		"noEmit": true,
+		// No DOM.
+		"lib": ["es2022"]
+	}
 }
