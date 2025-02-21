@@ -13,17 +13,17 @@ in a human readable format (for example, _"10 minutes ago"_, _"in 3 seconds"_).
 
 ## Pros
 
--   Simple API and usage
--   Small size (< 1KB)
--   No dependencies
--   Works in the browser
--   Written in Typescript
--   Well tested and documented
--   Accepts a custom date for the `now` anchor time
+- Simple API and usage
+- Small size (< 1KB)
+- No dependencies
+- Works in the browser
+- Written in Typescript
+- Well tested and documented
+- Accepts a custom date for the `now` anchor time
 
 ## Cons
 
--   Only `en_US` locale support.
+- Only `en_US` locale support.
 
 ## API & Package Info
 
@@ -31,9 +31,9 @@ in a human readable format (for example, _"10 minutes ago"_, _"in 3 seconds"_).
 timeAgo: (date: Date, now?: Date) => string;
 ```
 
--   Explore the API on [**jsDocs.io**](https://www.jsdocs.io/package/short-time-ago)
--   View package contents on [**unpkg**](https://unpkg.com/short-time-ago/)
--   View repository on [**GitHub**](https://github.com/velut/node-short-time-ago)
+- Explore the API on [**jsDocs.io**](https://www.jsdocs.io/package/short-time-ago)
+- View package contents on [**unpkg**](https://unpkg.com/short-time-ago/)
+- View repository on [**GitHub**](https://github.com/velut/node-short-time-ago)
 
 ## Install
 
@@ -65,13 +65,13 @@ UMD build:
 
 <!-- Usage -->
 <script>
-    const timeAgo = window['short-time-ago'].timeAgo;
+	const timeAgo = window["short-time-ago"].timeAgo;
 
-    const myDate = new Date();
-    const description = timeAgo(myDate);
+	const myDate = new Date();
+	const description = timeAgo(myDate);
 
-    // Output: `just now`.
-    console.log(description);
+	// Output: `just now`.
+	console.log(description);
 </script>
 ```
 
@@ -79,13 +79,13 @@ Module build:
 
 ```html
 <script type="module">
-    import { timeAgo } from 'https://unpkg.com/short-time-ago?module';
+	import { timeAgo } from "https://unpkg.com/short-time-ago?module";
 
-    const myDate = new Date();
-    const description = timeAgo(myDate);
+	const myDate = new Date();
+	const description = timeAgo(myDate);
 
-    // Output: `just now`.
-    console.log(description);
+	// Output: `just now`.
+	console.log(description);
 </script>
 ```
 
@@ -94,7 +94,7 @@ Module build:
 Basic usage:
 
 ```typescript
-import { timeAgo } from 'short-time-ago';
+import { timeAgo } from "short-time-ago";
 
 const myDate = new Date();
 const description = timeAgo(myDate);
@@ -106,10 +106,10 @@ console.log(description);
 Specifying a custom current date with the `now` parameter:
 
 ```typescript
-import { timeAgo } from 'short-time-ago';
+import { timeAgo } from "short-time-ago";
 
-const myDate = new Date('2019-01-01T00:00:00.000Z');
-const now = new Date('2019-01-01T00:01:00.000Z');
+const myDate = new Date("2019-01-01T00:00:00.000Z");
+const now = new Date("2019-01-01T00:01:00.000Z");
 const description = timeAgo(myDate, now);
 
 // Output: `1 minute ago`.
@@ -117,10 +117,10 @@ console.log(description);
 ```
 
 ```typescript
-import { timeAgo } from 'short-time-ago';
+import { timeAgo } from "short-time-ago";
 
-const myDate = new Date('2019-01-02T00:00:00.000Z');
-const now = new Date('2019-01-01T00:00:00.000Z');
+const myDate = new Date("2019-01-02T00:00:00.000Z");
+const now = new Date("2019-01-01T00:00:00.000Z");
 const description = timeAgo(myDate, now);
 
 // Output: `in 1 day`.

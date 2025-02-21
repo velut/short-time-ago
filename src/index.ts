@@ -69,26 +69,26 @@
  * @param now - the current date (optional, defaults to `new Date()`)
  */
 export function timeAgo(date: Date, now?: Date): string {
-    const units = [
-        ['year', 365 * 24 * 60 * 60 * 1000],
-        ['month', 30.5 * 24 * 60 * 60 * 1000],
-        ['day', 24 * 60 * 60 * 1000],
-        ['hour', 60 * 60 * 1000],
-        ['minute', 60 * 1000],
-        ['second', 1000],
-    ] as const;
+	const units = [
+		["year", 365 * 24 * 60 * 60 * 1000],
+		["month", 30.5 * 24 * 60 * 60 * 1000],
+		["day", 24 * 60 * 60 * 1000],
+		["hour", 60 * 60 * 1000],
+		["minute", 60 * 1000],
+		["second", 1000],
+	] as const;
 
-    const diff = (now || new Date()).getTime() - date.getTime();
-    const elapsed = Math.abs(diff);
+	const diff = (now || new Date()).getTime() - date.getTime();
+	const elapsed = Math.abs(diff);
 
-    for (const [name, size] of units) {
-        const value = Math.floor(elapsed / size);
-        if (value > 0) {
-            const plural = value > 1 ? 's' : '';
-            const description = `${value} ${name}${plural}`;
-            return diff > 0 ? `${description} ago` : `in ${description}`;
-        }
-    }
+	for (const [name, size] of units) {
+		const value = Math.floor(elapsed / size);
+		if (value > 0) {
+			const plural = value > 1 ? "s" : "";
+			const description = `${value} ${name}${plural}`;
+			return diff > 0 ? `${description} ago` : `in ${description}`;
+		}
+	}
 
-    return 'just now';
+	return "just now";
 }
