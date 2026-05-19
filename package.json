@@ -48,8 +48,8 @@
 		"attw": "attw --pack . --profile esm-only",
 		"test": "vitest",
 		"test:ci": "vitest run --coverage --bail 1",
-		"lint": "prettier --check .",
-		"format": "prettier --write .",
+		"lint": "oxfmt --check",
+		"format": "oxfmt",
 		"pre-push": "bun install && bun run lint && bun run build && bun run test:ci && bun run attw",
 		"release": "np --no-cleanup"
 	},
@@ -57,7 +57,7 @@
 		"@arethetypeswrong/cli": "^0.18.1",
 		"@vitest/coverage-v8": "^4.1.6",
 		"np": "^11.2.1",
-		"prettier": "^3.5.3",
+		"oxfmt": "^0.51.0",
 		"typescript": "^6.0.3",
 		"vitest": "^4.1.6",
 		"zshy": "^0.7.2"
