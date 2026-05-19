@@ -25,15 +25,16 @@
 		"readable",
 		"typescript"
 	],
-	"sideEffects": false,
 	"type": "module",
+	"sideEffects": false,
+	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
+		"./package.json": "./package.json",
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js"
-		},
-		"./package.json": "./package.json"
+			"default": "./dist/index.js"
+		}
 	},
 	"files": [
 		"dist"
@@ -43,8 +44,8 @@
 	},
 	"scripts": {
 		"check": "tsc --noEmit",
-		"build": "tsc --noEmit && tsup",
-		"attw": "attw --pack . --ignore-rules cjs-resolves-to-esm",
+		"build": "tsc --noEmit && zshy",
+		"attw": "attw --pack . --profile esm-only",
 		"test": "vitest",
 		"test:ci": "vitest run --coverage --bail 1",
 		"lint": "prettier --check .",
@@ -57,8 +58,15 @@
 		"@vitest/coverage-v8": "^4.1.6",
 		"np": "^11.2.1",
 		"prettier": "^3.5.3",
-		"tsup": "^8.4.0",
 		"typescript": "^6.0.3",
-		"vitest": "^4.1.6"
+		"vitest": "^4.1.6",
+		"zshy": "^0.7.2"
+	},
+	"zshy": {
+		"exports": {
+			"./package.json": "./package.json",
+			".": "./src/index.ts"
+		},
+		"cjs": false
 	}
 }
