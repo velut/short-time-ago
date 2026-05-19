@@ -1,72 +1,72 @@
 {
-	"name": "short-time-ago",
-	"version": "3.0.0",
-	"description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (for example, '1 minute ago')",
-	"license": "MIT",
-	"author": {
-		"name": "Edoardo Scibona",
-		"url": "https://github.com/velut"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/velut/short-time-ago.git"
-	},
-	"bugs": {
-		"url": "https://github.com/velut/short-time-ago/issues"
-	},
-	"keywords": [
-		"time",
-		"ago",
-		"date",
-		"format",
-		"describe",
-		"relative",
-		"human",
-		"readable",
-		"typescript"
-	],
-	"type": "module",
-	"sideEffects": false,
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		"./package.json": "./package.json",
-		".": {
-			"types": "./dist/index.d.ts",
-			"default": "./dist/index.js"
-		}
-	},
-	"files": [
-		"dist"
-	],
-	"engines": {
-		"node": ">=20"
-	},
-	"scripts": {
-		"check": "tsc --noEmit",
-		"build": "tsc --noEmit && zshy",
-		"attw": "attw --pack . --profile esm-only",
-		"test": "vitest",
-		"test:ci": "vitest run --coverage --bail 1",
-		"lint": "oxfmt --check",
-		"format": "oxfmt",
-		"pre-push": "bun install && bun run lint && bun run build && bun run test:ci && bun run attw",
-		"release": "np --no-cleanup"
-	},
-	"devDependencies": {
-		"@arethetypeswrong/cli": "^0.18.1",
-		"@vitest/coverage-v8": "^4.1.6",
-		"np": "^11.2.1",
-		"oxfmt": "^0.51.0",
-		"typescript": "^6.0.3",
-		"vitest": "^4.1.6",
-		"zshy": "^0.7.2"
-	},
-	"zshy": {
-		"exports": {
-			"./package.json": "./package.json",
-			".": "./src/index.ts"
-		},
-		"cjs": false
-	}
+  "name": "short-time-ago",
+  "version": "3.0.0",
+  "description": "A small, no dependencies, Typescript utility to describe time differences in a human readable format (for example, '1 minute ago')",
+  "keywords": [
+    "ago",
+    "date",
+    "describe",
+    "format",
+    "human",
+    "readable",
+    "relative",
+    "time",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/velut/short-time-ago/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Edoardo Scibona",
+    "url": "https://github.com/velut"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/velut/short-time-ago.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "tsc --noEmit && zshy",
+    "attw": "attw --pack . --profile esm-only",
+    "test": "vitest",
+    "test:ci": "vitest run --coverage --bail 1",
+    "lint": "oxfmt --check",
+    "format": "oxfmt",
+    "pre-push": "bun install && bun run lint && bun run build && bun run test:ci && bun run attw",
+    "release": "np --no-cleanup"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.1",
+    "@vitest/coverage-v8": "^4.1.6",
+    "np": "^11.2.1",
+    "oxfmt": "^0.51.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6",
+    "zshy": "^0.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "zshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    },
+    "cjs": false
+  }
 }
