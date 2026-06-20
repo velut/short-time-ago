@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - None
 
+## [3.1.0] - 2026-06-20
+
+### Changed
+
+- Build package with zshy.
+
 ## [3.0.0] - 2025-02-22
 
 ### Changed
