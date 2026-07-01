@@ -828,7 +828,7 @@
 
     "yoctocolors": ["yoctocolors@2.1.1", "", {}, "sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ=="],
 
-    "zshy": ["zshy@0.7.2", "", { "dependencies": { "arg": "^5.0.2", "fast-glob": "^3.3.2", "table": "^6.9.0" }, "peerDependencies": { "typescript": ">5.5.0" }, "bin": { "zshy": "dist/index.cjs" } }, "sha512-2ZOP5H1faC/+B80ZGsgd+clfV9moczAK1vjpAOC/SOHGfJ29WaMo5BaXy+gYWZFqcOhBJUE+07ACZl461l7zEQ=="],
+    "zshy": ["zshy@0.7.3", "", { "dependencies": { "arg": "^5.0.2", "fast-glob": "^3.3.2", "table": "^6.9.0" }, "peerDependencies": { "typescript": ">5.5.0" }, "bin": { "zshy": "dist/index.cjs" } }, "sha512-MLCAh1mwonX25z58SJEAvHGY8j4xSMsNGM1XCgYwYZgBWEO/4YeH1u+EejJlUbHbz21N2YQ0Dgg8WznKMEU26w=="],
 
     "@arethetypeswrong/core/typescript": ["typescript@5.6.1-rc", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-E3b2+1zEFu84jB0YQi9BORDjz9+jGbwwy1Zi3G0LUNw7a7cePUrHMRNy8aPh53nXpkFGVHSxIZo5vKTfYaFiBQ=="],
 
