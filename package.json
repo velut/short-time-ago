@@ -57,7 +57,7 @@
     "oxfmt": "^0.70.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.6",
-    "zshy": "^0.7.2"
+    "zshy": "^0.8.0"
   },
   "engines": {
     "node": ">=20"
